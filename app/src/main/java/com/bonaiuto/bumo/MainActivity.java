@@ -1,5 +1,6 @@
 package com.bonaiuto.bumo;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -17,6 +18,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         Log.d("fail", "nothing failed");
+        setTitle("Home");
     }
 
     public void handleInputText(View view){
@@ -44,6 +46,9 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void nextPage(View view) {
+        //launch the activity
+        Intent intent = new Intent(this, SettingsActivity.class);
+        startActivity(intent);
 
     }
 }
